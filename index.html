@@ -2,30 +2,51 @@
 
 <html>
  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
  	<title>Was there a coup in Egypt ?</title>
- 	<meta></meta>
- 	<meta></meta>
+    <meta name="description" content="Was there a coup in Egypt?">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
  	<link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
  <body>
- 	<h1 class="yes" >Yes.</h1>
- 	<h2 class="there" >There was.</h2>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '504876236249849',                        // App ID from the app dashboard
+      channelUrl : 'http://WWW.WasThereACoupInEgypt.com', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+</script>
+ 	<div id="container">
+		 	<img src="img/military_hat_trans.png">
+		 	<h1 class="yes" >YES</h1>
+		 	<h2 class="there" >THERE WAS</h2>
+
+		<div class="social">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://WasThereACoupInEgypt.com" data-text="Was there a coup in Egypt?">Tweet</a>
+
+				<!-- Facebook button -->
+<a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Share</a>
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+	 	</div>
+
+
 
  	<!-- twitter button -->
-	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://WasThereACoupInEgypt.com" data-text="Was there a coup in Egypt?">Tweet</a>
 	<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 	</script>
-	<!-- Facebook button -->
-	<a href="#" 
-  onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-      'facebook-share-dialog', 
-      'width=626,height=436'); 
-    return false;">
-  Share on Facebook
-</a>
+
+
  	<!--Google analytics -->
  	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
