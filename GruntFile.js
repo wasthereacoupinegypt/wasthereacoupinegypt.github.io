@@ -6,64 +6,59 @@ module.exports = function(grunt) {
     copy: {
       styles: {
         files: [
-          { expand: true, cwd: 'dev/css', src: '**', dest: 'prod/assets/css'}
+          { expand: true, cwd: 'dev/css', src: '**', dest: 'css/'}
         ]
       },
-      scripts: {
-        files: [
-          { expand: true, cwd: 'dev/js', src: '**', dest: 'prod/assets/js'}
-        ]
+      images: {
+        files: [{src: 'dev/img/favicon.ico', dest: 'img/favicon.ico'}]
+      },
+      comingsoon: {
+        files: [{src: 'comingsoon.html', dest: 'index.html'}]
       }
 
 
     },
 
-    watch: {
-      styles: {
-        files: ['dev/css/*.css'],
-        tasks: ['copy:styles']
+  imagemin: {                          // Task
+    default: {                          // Target
+      options: {                       // Target options
+        optimizationLevel: 3
       },
-      scripts: {
-        files: ['dev/js/*.js'],
-        tasks: ['copy:scripts']
-      },
-      sass: {
-        files: ['dev/scss/*.scss'],
-        tasks: ['sass:dev']
-      },
-      templates: {
-        files: ['dev/templates/*', 'dev/partials/*'],
-        tasks: ['staticHandlebars']
+      files: {                         
+        'img/military_hat_trans.png': 'dev/img/military_hat_trans.png'
       }
-    },
+    }
+  },
 
+  cssmin: {
+    combine: {
+      files: {
+        'css/style.min.css': ['dev/css/style.css']
+      }
+    }
+  },
 
-      },
+  processhtml: {
+    dist: {
+      files: {
+        'index.html': ['dev/index.html']
+      }
+    }
+  }
 
-  //   uglify: {
-  //     options: {
-  //       banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-  //     },
-  //     build: {
-  //       src: 'dev/js/<%= pkg.name %>.js',
-  //       dest: 'dev/js/<%= pkg.name %>.min.js'
-  //     }
-  //   }
-  // });
+  });
 
   // Load the plugin that provides the "uglify" task.
-  // grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-processhtml');
-  // grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  // grunt.loadNpmTasks('grunt-static-handlebars');
   
 
   // Default task(s).
-  // grunt.registerTask('default', ['sass', 'uglify', 'staticHandlebars', 'copy', 'watch']);
-  grunt.registerTask('dev', ['']);
-  grunt.registerTask('dist', ['']);
+  // grunt.registerTask('default', ['']);
+  grunt.registerTask('dist', ['processhtml', 'copy:styles', 'copy:images', 'imagemin:default', 'cssmin:combine']);
+  grunt.registerTask('comingsoon', ['copy:comingsoon',]);
 
 };
