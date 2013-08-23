@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         ]
       },
       images: {
-        files: [{src: 'dev/img/favicon.ico', dest: 'img/favicon.ico'}]
+        files: [{src: 'dev/img/myfavicon.ico', dest: 'img/myfavicon.ico'}]
       },
       comingsoon: {
         files: [{src: 'comingsoon.html', dest: 'index.html'}]
