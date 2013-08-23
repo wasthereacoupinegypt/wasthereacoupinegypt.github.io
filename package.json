@@ -1,0 +1,26 @@
+{
+  "name": "wasthereacoupinegypt",
+  "version": "0.0.1",
+  "description": "Was there a coupin egypt site",
+  "main": "GruntFile.js",
+  "dependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-processhtml": "~0.1.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wasthereacoupinegypt/wasthereacoupinegypt.github.io.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "eb16295c3ded7a4a3a33c97e20c9fb067959bfea"
+}

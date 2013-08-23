@@ -12,20 +12,23 @@
  	<link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
  <body>
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    // init the FB JS SDK
-    FB.init({
-      appId      : '504876236249849',                        // App ID from the app dashboard
-      channelUrl : 'http://WWW.WasThereACoupInEgypt.com', // Channel file for x-domain comms
-      status     : true,                                 // Check Facebook Login status
-      xfbml      : true                                  // Look for social plugins on the page
-    });
 
-    // Additional initialization code such as adding Event Listeners goes here
-  };
-</script>
+	<!-- FB js SDK -->
+	<div id="fb-root"></div>
+	<script>
+	  window.fbAsyncInit = function() {
+	    // init the FB JS SDK
+	    FB.init({
+	      appId      : '504876236249849',                        // App ID from the app dashboard
+	      channelUrl : 'http://WWW.WasThereACoupInEgypt.com', // Channel file for x-domain comms
+	      status     : true,                                 // Check Facebook Login status
+	      xfbml      : true                                  // Look for social plugins on the page
+	    });
+
+	    // Additional initialization code such as adding Event Listeners goes here
+	  };
+	</script>
+
  	<div id="container">
 		 	<img src="img/military_hat_trans.png">
 		 	<h1 class="yes" >YES</h1>
@@ -35,7 +38,7 @@
 				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://WasThereACoupInEgypt.com" data-text="Was there a coup in Egypt?">Tweet</a>
 
 				<!-- Facebook button -->
-<a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Share</a>
+<a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php">Share</a>
 <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 	 	</div>
 
