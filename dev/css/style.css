@@ -90,28 +90,30 @@ div.social {
   transition-duration: 300ms;
 }
 
-/* line 64, ../scss/style.scss */
-.sisi:hover {
+/* line 65, ../scss/style.scss */
+.sisi:hover,
+.sisi:active {
   height: 230px;
 }
 
-/* line 67, ../scss/style.scss */
-.sisi:hover .sisi_sprite-sisi {
+/* line 69, ../scss/style.scss */
+.sisi:hover .sisi_sprite-sisi,
+.sisi:active .sisi_sprite-sisi {
   height: 160px;
 }
 
-/* line 71, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 .twitter {
   float: left;
 }
 
-/* line 75, ../scss/style.scss */
+/* line 77, ../scss/style.scss */
 .facebook {
   float: right;
 }
 
 @media screen and (max-width: 400px) {
-  /* line 80, ../scss/style.scss */
+  /* line 82, ../scss/style.scss */
   #container {
     margin: 40px auto;
   }
