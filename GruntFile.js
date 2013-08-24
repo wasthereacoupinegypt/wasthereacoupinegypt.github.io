@@ -24,9 +24,12 @@ module.exports = function(grunt) {
       options: {                       // Target options
         optimizationLevel: 3
       },
-      files: {                         
-        'img/military_hat_trans.png': 'dev/img/military_hat_trans.png'
-      }
+      files: [{
+        expand: true,  
+        cwd: 'dev/img/',                       
+        src: ['*.{png,jpg}'],
+        dest: 'img/'
+      }]
     }
   },
 
@@ -34,6 +37,21 @@ module.exports = function(grunt) {
     combine: {
       files: {
         'css/style.min.css': ['dev/css/style.css']
+      }
+    }
+  },
+
+  compass: {                 
+    options: {
+      imagesDir: 'dev/img/',
+      httpGeneratedImagesPath: "../img/"
+
+    },
+
+    dev: {                  
+      options: {
+        sassDir: 'dev/scss',
+        cssDir: 'dev/css'
       }
     }
   },
@@ -54,11 +72,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   
 
   // Default task(s).
   // grunt.registerTask('default', ['']);
-  grunt.registerTask('dist', ['processhtml', 'copy:styles', 'copy:images', 'imagemin:default', 'cssmin:combine']);
-  grunt.registerTask('comingsoon', ['copy:comingsoon',]);
+  grunt.registerTask('dist', ['processhtml', 'compass:dev', 'copy:styles', 'copy:images', 'imagemin:default', 'cssmin:combine']);
+  grunt.registerTask('comingsoon', ['copy:comingsoon']);
+  grunt.registerTask('compasss', ['compass:dev']);
 
 };

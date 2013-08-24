@@ -1,48 +1,117 @@
-
-body {	
-	line-height: 1;
-	font-size: 100%;
-	font-family: Arial, Helvetica, sans-serif;
-	background: rgb(240, 240, 240);
+/* line 50, ../img/sisi_sprite/*.png */
+.sisi_sprite-sprite, .sisi_sprite-hat, .sisi_sprite-sisi {
+  background: url('../img/sisi_sprite-sf11a5406c0.png') no-repeat;
 }
 
+/* line 60, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sisi_sprite-hat {
+  background-position: 0 -218px;
+}
+
+/* line 60, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.sisi_sprite-sisi {
+  background-position: 0 0;
+}
+
+/* line 6, ../scss/style.scss */
+body {
+  line-height: 1;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f0f0;
+}
+
+/* line 13, ../scss/style.scss */
 #container {
-	width: 200px;
-	margin: 100px auto ;
+  width: 200px;
+  margin: 100px auto;
 }
 
+/* line 18, ../scss/style.scss */
 h1.yes {
-	font-size: 6em;
-	text-align: center;
-	color: #303030;
-	margin: 0;
-	margin-top: -6px;
+  font-size: 6em;
+  text-align: center;
+  color: #303030;
+  margin: 0;
+  margin-top: -6px;
 }
 
+/* line 26, ../scss/style.scss */
 h2.there {
-	font-size: 1.75em;
-	text-align: center;
-	color: #505050;
-	margin: 0;
-	margin-left: 10px;
-	margin-top: -5px;
+  font-size: 1.75em;
+  text-align: center;
+  color: #505050;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -5px;
 }
 
+/* line 35, ../scss/style.scss */
 div.social {
-	margin-top: 20px;
-	width: 100%;
+  margin-top: 20px;
+  width: 100%;
 }
 
+/* line 40, ../scss/style.scss */
+.sisi {
+  overflow: hidden;
+  width: 100%;
+  height: 90px;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+/* line 48, ../scss/style.scss */
+.sisi_sprite-hat {
+  width: 100%;
+  height: 90px;
+  margin-left: 10px;
+}
+
+/* line 54, ../scss/style.scss */
+.sisi_sprite-sisi {
+  width: 100%;
+  height: 0;
+  margin-top: -28px;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+/* line 63, ../scss/style.scss */
+.sisi:hover {
+  height: 230px;
+}
+
+/* line 66, ../scss/style.scss */
+.sisi:hover .sisi_sprite-sisi {
+  height: 160px;
+}
+
+/* line 70, ../scss/style.scss */
 .twitter {
-	float: left;
+  float: left;
 }
 
+/* line 74, ../scss/style.scss */
 .facebook {
-	float: right;
+  float: right;
 }
 
-@media screen and (max-width: 400px)  {
- 	#container {
- 		margin: 40px auto;
- 	}
+@media screen and (max-width: 400px) {
+  /* line 79, ../scss/style.scss */
+  #container {
+    margin: 40px auto;
+  }
 }
